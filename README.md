@@ -489,7 +489,7 @@ diabetic-retinopathy-detection/
 
 - 📧 Email: zda24m007@iitmz.ac.in
 - 💼 LinkedIn: (https://www.linkedin.com/in/patrick-v-b2a4445b/)
-- 🐱 GitHub: [@yourusername](https://github.com/PatrickIIT)
+- 🐱 GitHub: (https://github.com/PatrickIIT)
 
 ### Application Context
 This project was developed as part of my application for the **Data Scientist** position at **KCMC Eye Department** for the "Preventing Sight Loss from Diabetic Retinopathy Using Artificial Intelligence" project.
