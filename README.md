@@ -204,7 +204,7 @@ onnx>=1.14.0
 
 ```bash
 # Download from Kaggle (requires Kaggle API setup)
-kaggle datasets download -d (https://www.kaggle.com/datasets/pkdarabi/diagnosis-of-diabetic-retinopathy)
+kaggle datasets download -d https://www.kaggle.com/datasets/pkdarabi/diagnosis-of-diabetic-retinopathy
 unzip diagnosis-of-diabetic-retinopathy.zip -d data/
 ```
 
@@ -269,13 +269,34 @@ python gradcam_viz.py \
 
 ### Model Performance
 
-| Metric | EfficientNet-B0 | Vision Transformer |
-|--------|----------------|-------------------|
-| **Accuracy** | 94.2% | 93.8% |
-| **Sensitivity (Recall)** | 92.5% | 91.7% |
-| **Specificity** | 95.8% | 95.2% |
-| **AUC-ROC** | 0.968 | 0.961 |
-| **F1-Score** | 0.941 | 0.936 |
+**EfficientNet-B0 Architecture** (20 epochs, trained on 2,076 images)
+
+| Metric | Score | Details |
+|--------|-------|---------|
+| **Validation Accuracy** | **98.31%** | Best achieved at epoch 15 |
+| **Training Accuracy** | 99.52% | Final epoch |
+| **Precision (DR)** | 98% | Diabetic Retinopathy class |
+| **Precision (No_DR)** | 98% | Healthy class |
+| **Recall (DR)** | 98% | Sensitivity for DR detection |
+| **Recall (No_DR)** | 99% | Specificity for healthy cases |
+| **F1-Score (DR)** | 0.98 | Balanced performance |
+| **F1-Score (No_DR)** | 0.98 | Balanced performance |
+| **Overall F1-Score** | **0.98** | Macro average |
+
+### Training Dataset Distribution
+- **Total Training Images**: 2,076
+  - DR (Diabetic Retinopathy): 1,050 images
+  - No_DR (Healthy): 1,026 images
+- **Total Validation Images**: 531
+  - DR: 245 images
+  - No_DR: 286 images
+
+### Key Achievements
+✅ **98.31% validation accuracy** - Excellent generalization  
+✅ **Balanced performance** - Equal precision/recall across both classes  
+✅ **No overfitting** - Training accuracy (99.52%) close to validation  
+✅ **Fast convergence** - Best model achieved by epoch 15  
+✅ **Robust to class imbalance** - Used weighted loss function
 
 ### Training Curves
 
@@ -468,7 +489,7 @@ diabetic-retinopathy-detection/
 
 - 📧 Email: zda24m007@iitmz.ac.in
 - 💼 LinkedIn: (https://www.linkedin.com/in/patrick-v-b2a4445b/)
-- 🐱 GitHub: (https://github.com/PatrickIIT/)
+- 🐱 GitHub: [@yourusername](https://github.com/PatrickIIT)
 
 ### Application Context
 This project was developed as part of my application for the **Data Scientist** position at **KCMC Eye Department** for the "Preventing Sight Loss from Diabetic Retinopathy Using Artificial Intelligence" project.
