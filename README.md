@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **AI-Powered Diabetic Retinopathy Screening System**  
-> A comprehensive deep learning solution for automated detection and grading of diabetic retinopathy from retinal fundus images, developed as part of application for the Data Scientist position at KCMC Eye Department.
+> A comprehensive deep learning solution for automated detection and grading of diabetic retinopathy from retinal fundus images.
 
 ---
 
@@ -314,7 +314,7 @@ python gradcam_viz.py \
 
 ![ROC Curve](results/roc_curve.png)
 
-*Receiver Operating Characteristic with AUC = 0.968*
+*Receiver Operating Characteristic with AUC = 0.998*
 
 ---
 
@@ -398,30 +398,7 @@ docker run -p 5000:5000 dr-detection
 
 ```
 diabetic-retinopathy-detection/
-├── data/                      # Dataset directory
-│   ├── train/
-│   ├── valid/
-│   └── test/
-├── models/                    # Model architectures
-│   ├── __init__.py
-│   ├── efficientnet.py
-│   └── vision_transformer.py
-├── utils/                     # Utility functions
-│   ├── __init__.py
-│   ├── preprocessing.py
-│   ├── augmentation.py
-│   └── metrics.py
-├── explainability/           # XAI tools
-│   ├── __init__.py
-│   └── gradcam.py
-├── deployment/               # Deployment files
-│   ├── api.py
-│   ├── Dockerfile
-│   └── dr_model.onnx
-├── notebooks/                # Jupyter notebooks
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_model_training.ipynb
-│   └── 03_evaluation.ipynb
+├
 ├── results/                  # Training results
 │   ├── training_history.png
 │   ├── confusion_matrix.png
@@ -429,11 +406,6 @@ diabetic-retinopathy-detection/
 │   └── gradcam_visualization.png
 ├── checkpoints/              # Model checkpoints
 │   └── best_dr_model.pth
-├── train.py                  # Training script
-├── evaluate.py               # Evaluation script
-├── predict.py                # Inference script
-├── gradcam_viz.py           # Visualization script
-├── export_onnx.py           # Model export
 ├── requirements.txt          # Dependencies
 ├── README.md                 # This file
 └── LICENSE                   # License file
@@ -447,7 +419,7 @@ diabetic-retinopathy-detection/
 - [ ] Implement multi-class classification (5-grade DR severity)
 - [ ] Add support for other retinal conditions (AMD, glaucoma)
 - [ ] Develop mobile application for field deployment
-- [ ] Integrate with KCMC Eye Department systems
+- [ ] Integrate with Department systems
 
 ### Medium-term Goals
 - [ ] Create federated learning framework for privacy-preserving training
@@ -456,7 +428,7 @@ diabetic-retinopathy-detection/
 - [ ] Develop patient management dashboard
 
 ### Long-term Vision
-- [ ] Deploy in rural health facilities across Kilimanjaro and Arusha
+- [ ] Deploy in rural health facilities across Tanzania
 - [ ] Integrate with electronic health records (EHR)
 - [ ] Conduct prospective clinical validation study
 - [ ] Publish findings in peer-reviewed journals
@@ -491,9 +463,6 @@ diabetic-retinopathy-detection/
 - 💼 LinkedIn: (https://www.linkedin.com/in/patrick-v-b2a4445b/)
 - 🐱 GitHub: (https://github.com/PatrickIIT)
 
-### Application Context
-This project was developed as part of my application for the **Data Scientist** position at **KCMC Eye Department** for the "Preventing Sight Loss from Diabetic Retinopathy Using Artificial Intelligence" project.
-
 ---
 
 ## 📝 License
@@ -504,10 +473,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **KCMC Eye Department** for the opportunity and project vision
+- **KCMC** for the project vision
 - **Kaggle Community** for the dataset and resources
 - **PyTorch Team** for the excellent deep learning framework
-- **Medical professionals** who annotated the training data
 
 ---
 
